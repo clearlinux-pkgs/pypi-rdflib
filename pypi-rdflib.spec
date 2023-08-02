@@ -4,10 +4,10 @@
 # Using build pattern: pyproject
 #
 Name     : pypi-rdflib
-Version  : 6.3.2
-Release  : 1
-URL      : https://files.pythonhosted.org/packages/c8/28/4d1f27c5d73f58e567ca1a14a4eab7d7978a09c4e117687f9f6c216d3366/rdflib-6.3.2.tar.gz
-Source0  : https://files.pythonhosted.org/packages/c8/28/4d1f27c5d73f58e567ca1a14a4eab7d7978a09c4e117687f9f6c216d3366/rdflib-6.3.2.tar.gz
+Version  : 7.0.0
+Release  : 2
+URL      : https://files.pythonhosted.org/packages/0d/a3/63740490a392921a611cfc05b5b17bffd4259b3c9589c7904a4033b3d291/rdflib-7.0.0.tar.gz
+Source0  : https://files.pythonhosted.org/packages/0d/a3/63740490a392921a611cfc05b5b17bffd4259b3c9589c7904a4033b3d291/rdflib-7.0.0.tar.gz
 Summary  : RDFLib is a Python library for working with RDF, a simple yet powerful language for representing information.
 Group    : Development/Tools
 License  : BSD-3-Clause MIT
@@ -63,10 +63,10 @@ python3 components for the pypi-rdflib package.
 
 
 %prep
-%setup -q -n rdflib-6.3.2
-cd %{_builddir}/rdflib-6.3.2
+%setup -q -n rdflib-7.0.0
+cd %{_builddir}/rdflib-7.0.0
 pushd ..
-cp -a rdflib-6.3.2 buildavx2
+cp -a rdflib-7.0.0 buildavx2
 popd
 
 %build
@@ -74,7 +74,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1683223631
+export SOURCE_DATE_EPOCH=1690989016
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
