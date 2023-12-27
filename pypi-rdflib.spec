@@ -5,7 +5,7 @@
 #
 Name     : pypi-rdflib
 Version  : 7.0.0
-Release  : 3
+Release  : 4
 URL      : https://files.pythonhosted.org/packages/0d/a3/63740490a392921a611cfc05b5b17bffd4259b3c9589c7904a4033b3d291/rdflib-7.0.0.tar.gz
 Source0  : https://files.pythonhosted.org/packages/0d/a3/63740490a392921a611cfc05b5b17bffd4259b3c9589c7904a4033b3d291/rdflib-7.0.0.tar.gz
 Summary  : RDFLib is a Python library for working with RDF, a simple yet powerful language for representing information.
