@@ -1,5 +1,5 @@
 PKG_NAME := pypi-rdflib
-URL = https://files.pythonhosted.org/packages/0d/a3/63740490a392921a611cfc05b5b17bffd4259b3c9589c7904a4033b3d291/rdflib-7.0.0.tar.gz
+URL = https://files.pythonhosted.org/packages/8c/93/b91a99eb79da85bbbac0487ff28aeca4505d604484275d62b80ba269fd60/rdflib-7.1.0.tar.gz
 ARCHIVES = 
 
 include ../common/Makefile.common
