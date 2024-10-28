@@ -6,10 +6,10 @@
 # autospec commit: f35655a
 #
 Name     : pypi-rdflib
-Version  : 7.1.0
-Release  : 6
-URL      : https://files.pythonhosted.org/packages/8c/93/b91a99eb79da85bbbac0487ff28aeca4505d604484275d62b80ba269fd60/rdflib-7.1.0.tar.gz
-Source0  : https://files.pythonhosted.org/packages/8c/93/b91a99eb79da85bbbac0487ff28aeca4505d604484275d62b80ba269fd60/rdflib-7.1.0.tar.gz
+Version  : 7.1.1
+Release  : 7
+URL      : https://files.pythonhosted.org/packages/62/b6/4cee25689c7a3dfafeb481d358e74696fe3a8543da4cb2c1b71c0cb6583d/rdflib-7.1.1.tar.gz
+Source0  : https://files.pythonhosted.org/packages/62/b6/4cee25689c7a3dfafeb481d358e74696fe3a8543da4cb2c1b71c0cb6583d/rdflib-7.1.1.tar.gz
 Summary  : RDFLib is a Python library for working with RDF, a simple yet powerful language for representing information.
 Group    : Development/Tools
 License  : BSD-3-Clause MIT
@@ -57,7 +57,6 @@ Summary: python3 components for the pypi-rdflib package.
 Group: Default
 Requires: python3-core
 Provides: pypi(rdflib)
-Requires: pypi(html5lib_modern)
 Requires: pypi(pyparsing)
 
 %description python3
@@ -65,10 +64,10 @@ python3 components for the pypi-rdflib package.
 
 
 %prep
-%setup -q -n rdflib-7.1.0
-cd %{_builddir}/rdflib-7.1.0
+%setup -q -n rdflib-7.1.1
+cd %{_builddir}/rdflib-7.1.1
 pushd ..
-cp -a rdflib-7.1.0 buildavx2
+cp -a rdflib-7.1.1 buildavx2
 popd
 
 %build
@@ -76,7 +75,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1729177043
+export SOURCE_DATE_EPOCH=1730124976
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -121,6 +120,7 @@ LDFLAGS="$CLEAR_INTERMEDIATE_LDFLAGS"
 export MAKEFLAGS=%{?_smp_mflags}
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/pypi-rdflib
+cp %{_builddir}/rdflib-%{version}/LICENSE %{buildroot}/usr/share/package-licenses/pypi-rdflib/e5db3108df3b617d887d21c43779c2f01c2c7c67 || :
 cp %{_builddir}/rdflib-%{version}/docs/_themes/armstrong/LICENSE %{buildroot}/usr/share/package-licenses/pypi-rdflib/d64f881dddfe314d1ed5a3fdd1ea82dea901adae || :
 cp %{_builddir}/rdflib-%{version}/test/data/suites/w3c/n3/TurtleTests/LICENSE %{buildroot}/usr/share/package-licenses/pypi-rdflib/a88f037134ac8b4cb7cc897173f19368a6822c4a || :
 cp %{_builddir}/rdflib-%{version}/test/data/suites/w3c/turtle/LICENSE %{buildroot}/usr/share/package-licenses/pypi-rdflib/a88f037134ac8b4cb7cc897173f19368a6822c4a || :
@@ -153,6 +153,7 @@ popd
 %defattr(0644,root,root,0755)
 /usr/share/package-licenses/pypi-rdflib/a88f037134ac8b4cb7cc897173f19368a6822c4a
 /usr/share/package-licenses/pypi-rdflib/d64f881dddfe314d1ed5a3fdd1ea82dea901adae
+/usr/share/package-licenses/pypi-rdflib/e5db3108df3b617d887d21c43779c2f01c2c7c67
 
 %files python
 %defattr(-,root,root,-)
